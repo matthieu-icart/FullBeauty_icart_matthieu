@@ -1,0 +1,141 @@
+/* TEAMINFO */
+.teamInfo {
+  /* Size */
+  @include FullSize;
+  box-sizing: border-box;
+
+  /* Layout */
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  /* Font */
+  font-size: 23px;
+  text-align: justify;
+
+  /* Decoration */
+  background-color: $secondary-color;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px lightgrey;
+
+  /* Animation */
+  @include Apparition;
+
+  /* Transiton */
+  transition: transform 0.3s ease-in-out;
+
+  @include LargePhone {
+    /* Layout */
+    padding: 20px;
+
+    /* Font */
+    font-size: 15px;
+  }
+
+  @include Phone {
+    /* Layout */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    /* Font */
+    font-size: 15px;
+  }
+
+  @include SmallPhone {
+    /* Layout */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    /* Font */
+    font-size: 12px;
+  }
+
+  &:hover {
+    /* Deoration */
+    @include BackgroundLinearGradient;
+
+    /* Transform */
+    transform: scale(1.01);
+
+    @include Phone {
+      /* Transform */
+      transform: scale(1);
+    }
+
+    @include SmallPhone {
+      /* Transform */
+      transform: scale(1);
+    }
+  }
+
+  & h2 {
+    /* Layout */
+    margin: 0 auto;
+    padding-top: 10px;
+
+    /* Font */
+    font-size: 40px;
+    text-align: center;
+    text-shadow: $primary-color 1px 1px 0px;
+
+    @include LargePhone {
+      /* Font */
+      font-size: 30px;
+    }
+
+    @include Phone {
+      /* Font */
+      font-size: 25px;
+    }
+
+    @include SmallPhone {
+      /* Font */
+      font-size: 20px;
+    }
+  }
+
+  & .signature {
+    /* Layout */
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+    /* Font */
+    font-family: 'Great Vibes';
+    font-size: 40px;
+    text-align: center;
+
+    @include Phone {
+      /* Font */
+      font-size: 25px;
+    }
+
+    @include SmallPhone {
+      /* Font */
+      font-size: 25px;
+    }
+  }
+}
+
+/*CHOICE APPARITION*/
+@keyframes apparition {
+  0% {
+    /*Opacity*/
+    opacity: 0;
+  }
+
+  30% {
+    /*Opacity*/
+    opacity: 0.5;
+  }
+
+  100% {
+    /*Opacity*/
+    opacity: 1;
+  }
+}

@@ -1,0 +1,72 @@
+/* PAYSAGE */
+.square {
+  /* Size */
+  width: 95%;
+  height: 400px;
+  box-sizing: border-box;
+
+  /* Display */
+  @include FlexCenter;
+  column-gap: 5%;
+
+  /* Layout */
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+  @include SmallPhone {
+    /* Size */
+    height: 200px;
+  }
+
+  & button {
+    /* Size */
+    width: 40px;
+    height: 400px;
+    box-sizing: border-box;
+
+    /* Display */
+    @include FlexCenter;
+
+    /* Layout */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /* Decoration */
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 20px;
+
+    @include SmallPhone {
+      /* Layout */
+      padding: 1px;
+    }
+
+    &:hover {
+      /* Decoration */
+      @include BackgroundLinearGradientLighter;
+      box-shadow: 2px 2px 2px lightgray;
+    }
+  }
+
+  & i {
+    /* Font */
+    font-size: 30px;
+
+    /* Opacity */
+    opacity: 0.5;
+  }
+
+  &_image {
+    /* Size */
+    width: 70%;
+    height: 100%;
+
+    & img {
+      /* Size */
+      @include FullSize;
+      object-fit: contain;
+    }
+  }
+}

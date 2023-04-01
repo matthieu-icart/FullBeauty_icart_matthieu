@@ -1,0 +1,20 @@
+/* HOME */
+.home {
+  /* Size */
+  @include FullSize;
+
+  /* Layout */
+  margin: 0 auto;
+
+  &_pictures {
+    @include Phone {
+      /* Display */
+      display: none;
+    }
+
+    @include SmallPhone {
+      /* Display */
+      display: none;
+    }
+  }
+}

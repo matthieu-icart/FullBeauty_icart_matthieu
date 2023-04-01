@@ -1,0 +1,129 @@
+/* CONTACT */
+.contact {
+  /* Size */
+  @include FullSize;
+  box-sizing: border-box;
+
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  /* Layout */
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  /* Decoration */
+  background-color: $secondary-color;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px lightgrey;
+
+  /* Animation */
+  @include Apparition;
+
+  /* Transiton */
+  transition: transform 0.3s ease-in-out;
+
+  @include Phone {
+    /* Layout */
+    margin-top: 20px;
+  }
+
+  @include SmallPhone {
+    /* Layout */
+    margin-top: 20px;
+  }
+
+  &:hover {
+    /* Deoration */
+    @include BackgroundLinearGradient;
+
+    /* Transform */
+    transform: scale(1.01);
+    z-index: 3;
+  }
+
+  & h2 {
+    /* Layout */
+    margin: 0;
+
+    /* Font */
+    font-size: 80px;
+    text-align: center;
+    text-shadow: $primary-color 1px 1px 0px;
+
+    @include Phone {
+      /* Font */
+      font-size: 60px;
+    }
+
+    @include SmallPhone {
+      /* Font */
+      font-size: 60px;
+    }
+  }
+
+  & .coordonnees {
+    /* Size */
+    @include FullSize;
+
+    /* Font */
+    text-align: center;
+  }
+
+  &_information {
+    /* Size */
+    @include FullSize;
+
+    /* Display */
+    @include FlexCenter;
+
+    /* Font */
+    font-size: 30px;
+
+    @include Phone {
+      /* Font */
+      font-size: 20px;
+    }
+
+    @include SmallPhone {
+      /* Font */
+      font-size: 13px;
+    }
+
+    & p {
+      /* Layout */
+      margin: 0 auto;
+    }
+
+    & a {
+      /* Layout */
+      margin: 0 auto;
+
+      /* Font */
+      color: $LinkColor;
+    }
+  }
+}
+
+/*CHOICE APPARITION*/
+@keyframes apparition {
+  0% {
+    /*Opacity*/
+    opacity: 0;
+  }
+
+  30% {
+    /*Opacity*/
+    opacity: 0.5;
+  }
+
+  100% {
+    /*Opacity*/
+    opacity: 1;
+  }
+}

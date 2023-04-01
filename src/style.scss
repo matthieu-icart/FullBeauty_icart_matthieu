@@ -1,0 +1,45 @@
+/* UTILS */
+@import './sass/utils/variables.scss';
+@import './sass/utils/mixins.scss';
+
+/* INDEX */
+@import './index.scss';
+
+/* ERROR */
+@import './pages/Error/error.scss';
+
+/* HEADER */
+@import './layout/Header/header.scss';
+/* FOOTER */
+@import './layout/Footer/footer.scss';
+/* Components */
+@import './components/Logo/logo.scss';
+@import './components/Navigation/navigation.scss';
+
+/* HOME */
+@import './pages/Home/home.scss';
+/* Components */
+@import './components/HomePageSlider/homePageSlider.scss';
+@import './components/Services/services.scss';
+
+/* SERVICE */
+@import './pages/Service/service.scss';
+/* Components */
+@import './components/ServiceHeader/serviceHeader.scss';
+@import './components/Prestations/prestations.scss';
+@import './components/Button/button.scss';
+@import './components/Prestation/prestation.scss';
+
+/* GALLERY */
+@import './pages/Gallery/gallery.scss';
+/* Components */
+@import './components/Paysage/paysage.scss';
+@import './components/Square/square.scss';
+
+/* ABOUT */
+@import './pages/About/about.scss';
+/* Components */
+@import './components/Map/map.scss';
+@import './components/TeamInfo/teamInfo.scss';
+@import './components/Horaire/horaire.scss';
+@import './components/Contact/contact.scss';

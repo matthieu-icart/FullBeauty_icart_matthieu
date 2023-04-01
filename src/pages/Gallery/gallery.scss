@@ -1,0 +1,57 @@
+/* GALLERY */
+.gallery {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  /* layout */
+  margin-top: 20px;
+  margin-bottom: -10px;
+
+  & h2 {
+    /* Layout */
+    margin: 0;
+
+    /* Font */
+    font-size: 55px;
+    text-align: center;
+
+    @include Tablette {
+      /* Font */
+      font-size: 50px;
+    }
+
+    @include LargePhone {
+      /* Font */
+      font-size: 40px;
+    }
+
+    @include Phone {
+      /* Font */
+      font-size: 30px;
+    }
+
+    @include SmallPhone {
+      /* Font */
+      font-size: 20px;
+    }
+  }
+
+  & h3 {
+    /* Font */
+    text-align: center;
+  }
+
+  & img {
+    /* Size */
+    width: 90%;
+    height: 100%;
+
+    /* Layout */
+    margin: 0 auto;
+
+    /* Decoration */
+    border-radius: 10px;
+  }
+}

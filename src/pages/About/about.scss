@@ -1,0 +1,54 @@
+/* ABOUT */
+.about {
+  /* Size */
+  @include NineteenPercent;
+
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Layout */
+  margin: 0 auto;
+
+  &_information {
+    /* Size */
+    @include FullSize;
+
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 50px;
+
+    & div {
+      /* Size */
+      @include FullSize;
+    }
+
+    @include Tablette {
+      /* Display */
+      flex-direction: column;
+    }
+
+    @include LargePhone {
+      /* Display */
+      flex-direction: column;
+    }
+
+    @include Phone {
+      /* Display */
+      flex-direction: column;
+    }
+
+    @include SmallPhone {
+      /* Display */
+      flex-direction: column;
+    }
+  }
+
+  &_button {
+    /* Layout */
+    margin-top: 20px;
+  }
+}

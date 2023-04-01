@@ -1,0 +1,36 @@
+/* PRESTATIONS */
+.prestations {
+  /* Size */
+  @include NineteenPercent;
+
+  /* Display */
+  @include FlexCenter;
+  flex-direction: column;
+  row-gap: 30px;
+
+  /* Layout */
+  margin: 0 auto;
+
+  @include Tablette {
+    /* Size */
+    @include FullSize;
+  }
+
+  @include LargePhone {
+    /* Size */
+    @include FullSize;
+  }
+
+  @include Phone {
+    /* Size */
+    @include FullSize;
+  }
+
+  @include SmallPhone {
+    /* Size */
+    @include FullSize;
+
+    /* Display */
+    row-gap: 10px;
+  }
+}

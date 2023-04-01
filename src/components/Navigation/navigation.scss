@@ -1,0 +1,63 @@
+/* NAVIGATION */
+.navigation {
+  /* Size */
+  @include FullSize;
+
+  &_pages {
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10%;
+  }
+
+  &_page {
+    /* Font */
+    font-size: 25px;
+
+    /* Transition */
+    transition: all 0.4s linear;
+
+    @include Phone {
+      /* Font */
+      font-size: 17px;
+    }
+
+    @include SmallPhone {
+      /* Font */
+      font-size: 10px;
+    }
+
+    &:hover {
+      /* Decoration */
+      color: $DarkerTitle;
+
+      /* Animation */
+      @include Shake;
+    }
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(0, 2px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(0, -3px, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(0, 3px, 0);
+  }
+}

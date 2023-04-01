@@ -1,0 +1,143 @@
+/* SERVICEHEADER */
+.ServiceHeader {
+  /* Size */
+  @include FullSize;
+
+  /* Layout */
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  /* Font */
+  text-align: center;
+
+  @include SmallPhone {
+    /* Layout */
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  & h2 {
+    /* Size */
+    @include FullSize;
+
+    /* Layout */
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 0;
+
+    /* Font */
+    font-size: 100px;
+
+    @include Tablette {
+      /* Font */
+      font-size: 60px;
+    }
+
+    @include LargePhone {
+      /* Font */
+      font-size: 60px;
+    }
+
+    @include Phone {
+      /* Font */
+      font-size: 40px;
+    }
+
+    @include SmallPhone {
+      /* Font */
+      font-size: 25px;
+    }
+  }
+
+  & .accroche {
+    /* Size */
+    @include FullSize;
+
+    /* Layout */
+    margin: 0 auto;
+    padding: 0;
+
+    /* Font */
+    font-size: 30px;
+
+    @include Tablette {
+      /* Font */
+      font-size: 25px;
+    }
+
+    @include LargePhone {
+      /* Font */
+      font-size: 20px;
+    }
+
+    @include Phone {
+      /* Font */
+      font-size: 20px;
+    }
+
+    @include SmallPhone {
+      /* Font */
+      font-size: 10px;
+    }
+  }
+
+  & .explication {
+    /* Size */
+    @include FullSize;
+
+    /* Layout */
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+
+    /* Font */
+    font-size: 20px;
+    font-style: italic;
+
+    @include Tablette {
+      /* Size */
+      width: 95%;
+
+      /* Layout */
+      margin-top: 10px;
+
+      /* Font */
+      font-size: 20px;
+    }
+
+    @include LargePhone {
+      /* Size */
+      width: 95%;
+
+      /* Layout */
+      margin-top: 10px;
+
+      /* Font */
+      font-size: 17px;
+    }
+
+    @include Phone {
+      /* Size */
+      width: 95%;
+
+      /* Layout */
+      margin-top: 10px;
+
+      /* Font */
+      font-size: 15px;
+    }
+
+    @include SmallPhone {
+      /* Size */
+      width: 95%;
+      box-sizing: border-box;
+
+      /* Layout */
+      margin-top: 10px;
+
+      /* Font */
+      font-size: 10px;
+    }
+  }
+}

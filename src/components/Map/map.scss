@@ -1,0 +1,47 @@
+/* MAP */
+.map {
+  /* Size */
+  @include FullSize;
+
+  /* Animation */
+  @include Apparition;
+
+  & .iframe {
+    /* Size */
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+
+    /* Decoration */
+    border: 5px solid $secondary-color;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px lightgrey;
+
+    /* Transiton */
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      /* Transform */
+      transform: scale(1.01);
+      z-index: 3;
+    }
+  }
+}
+
+/*CHOICE APPARITION*/
+@keyframes apparition {
+  0% {
+    /*Opacity*/
+    opacity: 0;
+  }
+
+  30% {
+    /*Opacity*/
+    opacity: 0.5;
+  }
+
+  100% {
+    /*Opacity*/
+    opacity: 1;
+  }
+}

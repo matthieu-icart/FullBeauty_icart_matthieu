@@ -1,0 +1,32 @@
+/* FOOTER */
+footer {
+  /*  Size */
+  width: 100%;
+
+  /*  Display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /*  Layout */
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0 auto;
+  padding-top: 10px;
+
+  /* Decoration */
+  background-color: $secondary-color;
+  border-radius: 10px;
+
+  @include Phone {
+    /*  Layout */
+    margin-top: 20px;
+    padding-bottom: 1px;
+  }
+
+  @include SmallPhone {
+    /*  Layout */
+    margin-top: 20px;
+  }
+}

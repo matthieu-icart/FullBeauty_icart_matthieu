@@ -1,0 +1,20 @@
+/* HEADER */
+header {
+  /*  Size */
+  width: 100%;
+
+  /*  Display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /*  Layout */
+  margin: 0 auto;
+  padding: 0 auto;
+  padding-bottom: 10px;
+
+  /* Decoration */
+  background-color: $secondary-color;
+  border-radius: 10px;
+}

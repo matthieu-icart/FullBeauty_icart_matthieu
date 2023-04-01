@@ -1,0 +1,61 @@
+/* BUTTON */
+.button {
+  /* Size */
+  @include FullSize;
+
+  /* Layout */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  /* Font */
+  font-size: 30px;
+
+  /* Decoration  */
+  border: 1px solid $primary-color;
+  border-radius: 20px;
+  cursor: pointer;
+  background: linear-gradient(
+    180deg,
+    $ButtonColor_lighter 0%,
+    $ButtonColor 100%
+  );
+
+  @include Tablette {
+    /* Font */
+    font-size: 25px;
+  }
+
+  @include LargePhone {
+    /* Font */
+    font-size: 20px;
+  }
+
+  @include Phone {
+    /* Font */
+    font-size: 15px;
+
+    /* Layout */
+    margin-bottom: 10px;
+  }
+
+  @include SmallPhone {
+    /* Layout */
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* Font */
+    font-size: 12px;
+  }
+
+  &:hover {
+    /* Decoration */
+    @include BackgroundLinearGradientLighter;
+    border: 1px solid $primary-color;
+    box-shadow: 2px 2px 2px gray;
+  }
+}

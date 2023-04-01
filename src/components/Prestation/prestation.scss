@@ -1,0 +1,319 @@
+.prestation {
+  /* Size */
+  @include FullSize;
+  box-sizing: border-box;
+
+  & .button {
+    /* Size */
+    @include FullSize;
+
+    /* Layout */
+    margin: 0 auto;
+    padding: 0;
+
+    /* Decoration */
+    @include BackgroundLinearGradient;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+
+    /*Animation*/
+    @include Apparition;
+
+    &:hover {
+      /* Decoration */
+      @include BackgroundLinearGradientLighter;
+      box-shadow: 2px 2px 10px lightgrey;
+
+      /* Animation */
+      @include Shake;
+    }
+
+    & .card {
+      /* Size */
+      width: 95%;
+      height: 80px;
+
+      /* Display */
+      @include FlexCenter;
+      flex-direction: column;
+
+      /* Layout */
+      margin: 0 auto;
+
+      @include Phone {
+        /* Size */
+        height: 95px;
+      }
+    }
+
+    & .faceA {
+      /* Size */
+      @include FullSize;
+
+      /* Display */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      /* Layout */
+      margin: 0 auto;
+
+      /* Font */
+      font-weight: bolder;
+
+      @include Phone {
+        /* Display */
+        @include FlexCenter;
+        flex-direction: column;
+      }
+    }
+
+    & h3 {
+      /* Size */
+      width: 60%;
+
+      /* Layout */
+      margin: 0;
+
+      /* Font */
+      font-size: 30px;
+      text-align: start;
+      text-shadow: $primary-color 1px 1px 0px;
+
+      @include LargePhone {
+        /* Size */
+        width: 65%;
+
+        /* Font */
+        font-size: 25px;
+      }
+
+      @include Phone {
+        /* Size */
+        width: 100%;
+
+        /* Layout */
+        padding: 5px;
+
+        /* Font */
+        font-size: 18px;
+        text-align: center;
+      }
+
+      @include SmallPhone {
+        /* Font */
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+
+    & .details {
+      /* Size */
+      width: 20%;
+      box-sizing: border-box;
+
+      /* Display */
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      /* Font */
+      font-size: 20px;
+      font-style: italic;
+
+      @include LargePhone {
+        /* Font */
+        font-size: 17px;
+      }
+
+      @include Phone {
+        /* Size */
+        width: 100%;
+
+        /* Display */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 10px;
+
+        /* Font */
+        font-size: 15px;
+      }
+
+      @include SmallPhone {
+        /* Display */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        /* Layout */
+        margin-right: 5px;
+
+        /* Font */
+        font-size: 11px;
+      }
+
+      & .detail {
+        /* Display */
+        @include FlexCenter;
+
+        @include SmallPhone {
+          /* Display */
+          flex-direction: column;
+        }
+      }
+
+      & .price {
+        /* Size */
+        box-sizing: border-box;
+
+        /* Layout */
+        margin-left: 10px;
+
+        @include SmallPhone {
+          /* Layout */
+          margin-left: 0px;
+        }
+      }
+    }
+
+    & .showDown {
+      /* Size */
+      box-sizing: border-box;
+
+      /* Layout */
+      margin: 0;
+      margin-left: 20px;
+
+      @include SmallPhone {
+        /* Layout */
+        margin-left: 0px;
+      }
+
+      & .hidden {
+        /* Decoration */
+        visibility: hidden;
+
+        @include Phone {
+          /* Display */
+          display: none;
+        }
+
+        @include SmallPhone {
+          /* Display */
+          display: none;
+        }
+      }
+    }
+  }
+  & .description {
+    /* Size */
+    width: 99%;
+    box-sizing: border-box;
+
+    /* Layout */
+    margin: auto;
+
+    /* Decoration */
+    background: linear-gradient(
+      180deg,
+      $secondary-color 0%,
+      $primary-color 100%
+    );
+    box-shadow: 0px 0px 5px lightgrey;
+    border-radius: 10px 10px 10px 10px;
+
+    & .faceB {
+      /* Size */
+      @include NineteenPercent;
+
+      /* Layout */
+      margin: 0px auto;
+      margin-top: 7px;
+
+      /* Font */
+      font-size: 20px;
+      font-style: italic;
+
+      /* Decoration */
+      border: none;
+      border-radius: 10px;
+      background: inherit;
+
+      @include LargePhone {
+        /* Font */
+        font-size: 15px;
+      }
+
+      @include Phone {
+        /* Font */
+        font-size: 12px;
+      }
+
+      @include SmallPhone {
+        /* Font */
+        font-size: 10px;
+      }
+
+      & p {
+        /* Layout */
+        margin-bottom: 5px;
+
+        /* Font */
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.open {
+  /* Display */
+  @include FlexCenter;
+}
+
+.close {
+  /* Display */
+  display: none;
+}
+
+/*CHOICE APPARITION*/
+@keyframes apparition {
+  0% {
+    /*Opacity*/
+    opacity: 0;
+  }
+
+  30% {
+    /*Opacity*/
+    opacity: 0.5;
+  }
+
+  100% {
+    /*Opacity*/
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(0, 2px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(0, -3px, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(0, 3px, 0);
+  }
+}

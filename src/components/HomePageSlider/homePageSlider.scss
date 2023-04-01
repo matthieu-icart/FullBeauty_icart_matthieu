@@ -1,0 +1,20 @@
+/* SLIDER */
+.slider {
+  /* Size */
+  @include NineteenPercent;
+  height: 300px;
+
+  /* Layout */
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* IMAGE */
+.slider img {
+  /* Size */
+  @include FullSize;
+
+  /* Layout */
+  object-fit: cover;
+  border-radius: 10px;
+}

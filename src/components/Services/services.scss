@@ -1,0 +1,195 @@
+/* DELIVERYS */
+.services {
+  /* Size */
+  @include NineteenPercent;
+
+  /* Display */
+  @include FlexCenter;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  /* Layout */
+  margin: 0 auto;
+  margin-top: 30px;
+
+  /*Animation*/
+  @include Apparition;
+
+  @include Phone {
+    /* Display */
+    gap: 20px;
+
+    /* Layout */
+    margin-top: 20px;
+  }
+
+  @include SmallPhone {
+    /* Display */
+    gap: 20px;
+
+    /* Layout */
+    margin-top: 20px;
+  }
+
+  &_card {
+    /* Size */
+    width: 30%;
+    height: 300px;
+    box-sizing: border-box;
+
+    /* Display */
+    @include FlexCenter;
+
+    /* Font */
+    text-align: center;
+
+    /* Decoration */
+    @include BackgroundLinearGradient;
+    box-shadow: 0px 0px 10px lightgrey;
+    border-radius: 10px;
+
+    @include LargePhone {
+      /* Size */
+      width: 100%;
+      height: 200px;
+    }
+
+    @include Phone {
+      /* Size */
+      width: 100%;
+      height: 200px;
+    }
+
+    @include SmallPhone {
+      /* Size */
+      width: 100%;
+      height: 200px;
+    }
+
+    & a {
+      /* Size */
+      @include FullSize;
+
+      /* Display */
+      @include FlexCenter;
+    }
+
+    & .title {
+      /* Font */
+      text-shadow: 1px 1px 1px black;
+      color: $DarkerTitle;
+      font-size: 18px;
+
+      @include Tablette {
+        /* Font */
+        font-size: 15px;
+      }
+
+      @include SmallPhone {
+        /* Font */
+        font-size: 15px;
+      }
+    }
+
+    & .info {
+      /* Display */
+      display: none;
+    }
+
+    /* HOVER */
+    &:hover {
+      /* Decoration */
+      @include BackgroundLinearGradientLighter;
+      border: 1px solid black;
+      box-shadow: 7px 7px 7px grey;
+
+      /* Animation */
+      @include Shake;
+
+      & .title {
+        /* Display */
+        display: none;
+      }
+
+      & .info {
+        /* Display */
+        @include FlexCenter;
+        flex-direction: column;
+      }
+
+      & .accroche {
+        /* Size */
+        width: 80%;
+
+        /* Font */
+        font-style: italic;
+
+        @include Tablette {
+          /* Font */
+          font-size: 12px;
+        }
+
+        @include Phone {
+          /* Font */
+          font-size: 11px;
+        }
+
+        @include SmallPhone {
+          /* Font */
+          font-size: 9px;
+        }
+      }
+
+      & .setLink {
+        /* Layout */
+        margin-top: 15px;
+        margin-bottom: 10px;
+
+        /* Font */
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/*CHOICE APPARITION*/
+@keyframes apparition {
+  0% {
+    /*Opacity*/
+    opacity: 0;
+  }
+
+  30% {
+    /*Opacity*/
+    opacity: 0.5;
+  }
+
+  100% {
+    /*Opacity*/
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(0, 2px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(0, -3px, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(0, 3px, 0);
+  }
+}

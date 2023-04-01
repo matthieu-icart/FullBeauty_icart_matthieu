@@ -1,0 +1,69 @@
+/* BODY */
+body {
+  /* Size */
+  @include FullSize;
+  max-width: 1500px;
+  min-width: 200px;
+
+  /* Display */
+  @include FlexCenter;
+  flex-direction: column;
+
+  /* Layout */
+  margin: 0 auto;
+
+  /* Font */
+  font-family: $ParagraphePolice;
+
+  /* Decoration */
+  background-color: $primary-color;
+
+  & h1,
+  h2,
+  h3,
+  h4 {
+    /* Font */
+    font-family: $TitlePolice;
+  }
+
+  & p {
+    /* Layout */
+    margin: 0;
+    padding: 0;
+  }
+
+  & a {
+    /* Font */
+    text-decoration: none;
+    color: inherit;
+  }
+
+  & ul {
+    /* Layout */
+    margin: 0 auto;
+    padding: 0;
+
+    /* Decoration */
+    list-style: none;
+  }
+
+  @include Phone {
+    /* Size */
+    @include FullSize;
+  }
+
+  @include SmallPhone {
+    /* Size */
+    @include FullSize;
+  }
+}
+
+/* ROOT */
+#root {
+  /* Size */
+  @include FullSize;
+
+  /* Layout */
+  margin: 0;
+  padding: 0;
+}
